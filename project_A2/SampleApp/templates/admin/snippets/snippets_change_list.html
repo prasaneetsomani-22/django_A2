@@ -5,13 +5,14 @@
 		{% csrf_token %}
 		<input name="fontsize", class="vTextfield">
 		<button class="button",type="submit">Change Font Size</button>
-		<br>
-		<script type="text/javascript">
+	</form>
+	<br>
+	<script type="text/javascript">
 			let fontSizeForm = document.querySelector('#fontsize-form')
 			fontSizeForm.querySelector('input[name="fontsize"]').addEventListener('change', function(e){
 				let fontSize = e.target.value
 				fontSizeForm.action = 'fontsize/' + fontSize + '/'
 			})
-		</script>
-	    {{block.super}}
+	</script>
+	{{block.super}}
 {% endblock object-tools %}
