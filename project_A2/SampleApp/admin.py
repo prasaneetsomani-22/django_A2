@@ -23,7 +23,7 @@ class SnippetAdmin(admin.ModelAdmin):
 	def change_font_size(self , request, size):
 		self.model.objects.all().update(fontsize=size)
 		self.message_user(request, 'font size set successfully!')
-		return HttpResponseRedirect("../")
+		return HttpResponseRedirect("../../")
 
 
 admin.site.register(Snippet,SnippetAdmin)
